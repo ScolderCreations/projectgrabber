@@ -9,8 +9,8 @@ while "y" in wanna:
   rup = requests.get(url, allow_redirects=True)
   inpat = input("yo! wanna download this random project? ")
   if "y" in inpat:
-    if "40" in rup: 
-      print("failure")
+    if "[40" in rup: 
+      print("failure to download")
     else:
-      open('RandomProject' + PROJECT_ID + '.sb3', 'wb').write(rup.content)
+      open('RandomProject' + PROJECT_ID + '.json', 'wb').write(rup.content)
   wanna = input("wanna download another? ")
