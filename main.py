@@ -7,6 +7,7 @@ while "y" in wanna:
   url = 'https://projects.scratch.mit.edu/' + PROJECT_ID
   print("chosen project \"" + url + "\"")
   rup = requests.get(url, allow_redirects=True)
+  rup = rup.json()
   inpat = input("yo! wanna download this random project? ")
   if "y" in inpat:
     if "[40" in rup: 
